@@ -11,7 +11,7 @@
  */
 'use strict';
 
-const CACHE_VERSION = '42b378afdc';
+const CACHE_VERSION = '8d0862f4ac';
 const CACHE_PREFIX = 'fortune-pizza-';
 const CACHE = CACHE_PREFIX + CACHE_VERSION;
 const PAGE = './';
@@ -122,14 +122,20 @@ function assetResponse(req) {
 // «сначала кэш, потом сеть», удачный ответ сохраняется в тот же кэш (CACHE). Без сети и без копии — пустой ответ:
 // картинка не загрузится, на сайте останется рисунок (без сетевой ошибки в консоли).
 const PHOTO_PRECACHE = [
-  './photos/01-sety-t.webp',
-  './photos/01-sety.webp',
   './photos/02-pizza-t.webp',
   './photos/02-pizza.webp',
   './photos/03-sushi-t.webp',
   './photos/03-sushi.webp',
   './photos/04-goryachie-zakuski-t.webp',
-  './photos/04-goryachie-zakuski.webp'
+  './photos/04-goryachie-zakuski.webp',
+  './photos/sety-2-3-t.webp',
+  './photos/sety-2-3.webp',
+  './photos/sety-4-5-t.webp',
+  './photos/sety-4-5.webp',
+  './photos/sety-6-8-t.webp',
+  './photos/sety-6-8.webp',
+  './photos/sety-9-12-t.webp',
+  './photos/sety-9-12.webp'
 ];
 const photosUrl = new URL('./photos/', self.location).href;
 
